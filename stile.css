@@ -1,4 +1,4 @@
-   /* CSS spostato*/
+/* CSS spostato*/
    body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -684,4 +684,55 @@
 
 .it, .en, .original {
       display: none;
+}
+
+.bottone.spotify {
+  background-color: #1DB954;
+  color: #fff;
+}
+.bottone.spotify:hover {
+  background-color: #1ED760;
+}
+
+.bottone.applemusic {
+  background: linear-gradient(135deg, #FA233B 0%, #FA57C1 100%);
+  color: #fff;
+}
+.bottone.applemusic:hover {
+  filter: brightness(1.1);
+}
+
+.bottone.amazon {
+  background-color: #FF9900;
+  color: #111;
+}
+.bottone.amazon:hover {
+  filter: brightness(1.1);
+}
+
+.link-streaming {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.link-streaming a.bottone {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 10px 12px;
+  min-width: 100px;
+}
+
+@media (max-width: 768px) {
+  .link-streaming {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link-streaming a.bottone {
+    width: 90%;
+    max-width: 320px;
+  }
 }
