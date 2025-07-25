@@ -7,7 +7,52 @@
 <title>Discografia - Giuseppe Chiaramonte</title>
 <link href="stile.css" rel="stylesheet"/>
 <!-- Stili brandizzati per i pulsanti di streaming / acquisto -->
+<style>
+    .bottone.spotify {
+      background-color:#1DB954; /* verde Spotify */
+      color:#fff;
+    }
+    .bottone.spotify:hover { background-color:#1ED760; }
 
+    .bottone.applemusic {
+      background:linear-gradient(135deg,#FA233B 0%,#FA57C1 100%); /* gradiente Apple Music */
+      color:#fff;
+    }
+    .bottone.applemusic:hover { filter:brightness(1.1); }
+
+    .bottone.amazon {
+      background-color:#FF9900; /* arancione "freccia" Amazon */
+      color:#111;
+    }
+    .bottone.amazon:hover { filter:brightness(1.1); }
+  
+/* Pulsanti ordinati e verticali in versione mobile */
+.link-streaming {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.link-streaming a.bottone {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 10px 12px;
+  min-width: 100px;
+}
+
+@media (max-width: 600px) {
+  .link-streaming {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .link-streaming a.bottone {
+    width: 100%;
+  }
+}
+</style>
 </head>
 <body>
 <!-- NAVBAR -->
@@ -48,10 +93,10 @@
 <div>
 <h3>Milán &amp; Narváez: Spanish Renaissance Music <span style="font-weight:normal;">(<a href="https://www.brilliantclassics.com/articles/m/mil%C3%A1n-narv%C3%A1ez-spanish-renaissance-music/" target="_blank" style="text-decoration: underline;">Brilliant Classics</a>, 2022)</span></h3>
 <p>Un viaggio nella musica rinascimentale spagnola con opere per vihuela di Luys Milán e Luys de Narváez, tra fantasie, danze e variazioni del XVI secolo.</p>
-<div class="link-streaming">
+<p class="link-streaming">
   <a class="bottone spotify" href="https://open.spotify.com/intl-it/album/6wsB3tIFlV5FK2FFDyLT50" rel="noopener" style="" target="_blank">Spotify</a>
   <a class="bottone applemusic" href="https://music.apple.com/us/album/mil%C3%A1n-narv%C3%A1ez-spanish-renaissance-music/1625496786" rel="noopener" style="" target="_blank">Apple Music</a>
-  <a class="bottone amazon" href="https://www.amazon.it/Spanish-Renaissance-Music-Giuseppe-Chiaramonte/dp/B09XZ5Q9B6" rel="noopener" style="" target="_blank">Amazon</a></div>
+  <a class="bottone amazon" href="https://www.amazon.it/Spanish-Renaissance-Music-Giuseppe-Chiaramonte/dp/B09XZ5Q9B6" rel="noopener" style="" target="_blank">Amazon</a></p>
 </div>
 </div>
 <!-- ALBUM 2 -->
@@ -60,10 +105,10 @@
 <div>
 <h3>Mertz: Fantasias for Solo Guitar <span style="font-weight:normal;">(<a href="https://www.brilliantclassics.com/articles/m/mertz-fantasias-for-solo-guitar/" target="_blank" style="text-decoration: underline;">Brilliant Classics</a>, 2019)</span></h3>
 <p>Monografico dedicato alle più importanti fantasie originali di Johann Kaspar Mertz, accolto con entusiasmo dalla critica internazionale. </p>
-<div class="link-streaming">
+<p class="link-streaming">
   <a class="bottone spotify" href="https://open.spotify.com/intl-it/album/5x69xVBtUFnK0MeWvKbObt" rel="noopener" style="" target="_blank">Spotify</a>
   <a class="bottone applemusic" href="https://music.apple.com/it/album/mertz-fantasias-for-solo-guitar/1451619514" rel="noopener" style="" target="_blank">Apple Music</a>
-  <a class="bottone amazon" href="https://www.amazon.it/Fantasias-Solo-Guitar-Chiaramonte-Giuseppe/dp/B07MWZ5NMD?camp=1789&creative=9325&dib=eyJ2IjoiMSJ9.SowbTiZGPqSpxCwZDbEE-w.VzpM9XJAd5Qbon4OO6ELT0Z0S0cJyeB0nJJUv3p4Y3w&dib_tag=se&keywords=5028421957227&linkCode=ur2&qid=1747296584&sr=8-1" rel="noopener" style="" target="_blank">Amazon</a></div></p>
+  <a class="bottone amazon" href="https://www.amazon.it/Fantasias-Solo-Guitar-Chiaramonte-Giuseppe/dp/B07MWZ5NMD?camp=1789&creative=9325&dib=eyJ2IjoiMSJ9.SowbTiZGPqSpxCwZDbEE-w.VzpM9XJAd5Qbon4OO6ELT0Z0S0cJyeB0nJJUv3p4Y3w&dib_tag=se&keywords=5028421957227&linkCode=ur2&qid=1747296584&sr=8-1" rel="noopener" style="" target="_blank">Amazon</a></p></p>
 </div>
 <!-- ALBUM 3 -->
 <div class="album" style="margin-bottom:40px; display:flex; flex-wrap:wrap; gap:20px; align-items:center;">
@@ -71,10 +116,10 @@
 <div>
 <h3>Soul Of Strings<span style="font-weight:normal;"> (<a href="https://davinci-edition.com/product/c00007/" target="_blank" style="text-decoration: underline;">Da Vinci Classics</a>, 2017)</span></h3>
 <p>Un album che esplora il repertorio chitarristico dal Barocco al Contemporaneo. Un viaggio sonoro ricco di colore, tecnica e sensibilità interpretativa. </p>
-<div class="link-streaming">
+<p class="link-streaming">
   <a class="bottone spotify" href="https://open.spotify.com/intl-it/album/6sJGrzRGmAhbtg9qMPLr9G" rel="noopener" style="" target="_blank">Spotify</a>
   <a class="bottone applemusic" href="https://music.apple.com/it/album/soul-of-strings/1247456734" rel="noopener" style="" target="_blank">Apple Music</a>
-  <a class="bottone amazon" href="https://www.amazon.com/Soul-Strings-Giuseppe-Chiaramonte/dp/B0721CLSD4?crid=3RDOH4XEFYWR3&dib=eyJ2IjoiMSJ9.stKf7CVB7zyaT8lQJy7vxcfw5H9AOoOoZmx4IK23eLk.5nr1oHW_NtNmjEAGDXoEMdAhvHitVWsP8okBmRQU2is&dib_tag=se&keywords=soul+of+strings+giuseppe+chiaramonte&qid=1747301664&sprefix=soul+of+strings+giuseppe+chiaramont%2Caps%2C306&sr=8-1" rel="noopener" style="" target="_blank">Amazon</a></div></p>
+  <a class="bottone amazon" href="https://www.amazon.com/Soul-Strings-Giuseppe-Chiaramonte/dp/B0721CLSD4?crid=3RDOH4XEFYWR3&dib=eyJ2IjoiMSJ9.stKf7CVB7zyaT8lQJy7vxcfw5H9AOoOoZmx4IK23eLk.5nr1oHW_NtNmjEAGDXoEMdAhvHitVWsP8okBmRQU2is&dib_tag=se&keywords=soul+of+strings+giuseppe+chiaramonte&qid=1747301664&sprefix=soul+of+strings+giuseppe+chiaramont%2Caps%2C306&sr=8-1" rel="noopener" style="" target="_blank">Amazon</a></p></p>
 </div>
 </div>
 <!-- AggiungeRE blocchi album seguendo lo stesso schema -->
@@ -97,11 +142,6 @@
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
     </a>
   </div>
-
-  <footer>
-    © 2025 Giuseppe Chiaramonte | <a href="cookie.html">Cookie Policy</a>
-  </footer>
-
 </section>
 
 <!-- SCRIPT MENU -->
