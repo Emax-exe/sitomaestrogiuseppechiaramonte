@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cookie Policy - Giuseppe Chiaramonte</title>
+  <link rel="stylesheet" href="stile.css" />
+</head>
+<body>
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="logo"><a href="index.html">Home</a></div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="menu-links" id="menuLinks">
+      <li><a href="biografia.html">Biografia</a></li>
+      <li><a href="discografia.html">Discografia</a></li>
+      <li><a href="index.html#eventi">Eventi</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+      <li><a href="recensioni.html">Recensioni</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="contatti">
+  <h2>Informativa sui Cookie / Cookie Policy</h2>
+
+  <div lang="it">
+    <p>Questo sito utilizza esclusivamente <strong>cookie tecnici</strong>, necessari al corretto funzionamento delle pagine web. Non viene effettuata alcuna attività di profilazione e non vengono installati cookie di terze parti a fini di marketing o analisi.</p>
+    <p>Continuando la navigazione si accetta l’uso dei soli cookie tecnici.</p>
+  </div>
+
+  <div lang="en" style="margin-top: 30px;">
+    <p>This website uses only <strong>technical cookies</strong>, strictly necessary for the proper functioning of the web pages. No profiling is performed, and no third-party marketing or analytics cookies are installed.</p>
+    <p>By continuing to browse, you accept the use of technical cookies only.</p>
+  </div>
+
+  <p style="margin-top: 30px; text-align: center;">
+    <a href="index.html" class="bottone">← Torna alla Home</a>
+  </p>
+</section>
+
+<script>
+  function toggleMenu() {
+    const links = document.getElementById("menuLinks");
+    links.classList.toggle("open");
+  }
+</script>
+
+</body>
+</html>
