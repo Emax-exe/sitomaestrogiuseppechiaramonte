@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giuseppe Chiaramonte - Chitarrista Classico</title>
+  <link rel="stylesheet" href="stile.css">
+  <title>Giuseppe Chiaramonte - Chitarrista Classico</title>
+</head>
+<body>
+<div class="menu-blur-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Giuseppe Chiaramonte</h1>
+    <h2>Chitarrista Classico e Docente</h2>
+    <p class="sottotitolo">"La musica inizia dove le parole finiscono."</p>
+    <a href="discografia.html" class="bottone">Scopri la mia musica</a>
+  </div>
+</section>
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="logo"><a href="index.html">Home</a></div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="menu-links" id="menuLinks">
+      <li><a href="biografia.html">Biografia</a></li>
+      <li><a href="discografia.html">Discografia</a></li>
+      <li><a href="#eventi">Eventi</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+      <li><a href="recensioni.html">Recensioni</a></li>
+    </ul>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+  <span class="titolo-menu">Giuseppe Chiaramonte</span>
+  <span class="close-menu" onclick="toggleMenu()">✕</span>
+  </div>
+  <ul>
+    <li><a href="biografia.html">Biografia</a></li>
+    <li><a href="discografia.html">Discografia</a></li>
+    <li><a href="index.html#eventi">Eventi</a></li>
+    <li><a href="contatti.html">Contatti</a></li>
+    <li><a href="recensioni.html">Recensioni</a></li>
+  </ul>
+  </div>  
+</nav>
+
+  <section class="biografia">
+    <h2>Biografia</h2>
+    <p style="text-align: justify;">
+     Nato a Catanzaro nel 1985, Giuseppe Chiaramonte ha debuttato a soli 15 anni come concertista di chitarra classica. 
+     Da allora si è esibito come solista in tutta Europa, affermandosi per il suo stile espressivo, la raffinatezza tecnica e la profonda ricerca timbrica. 
+     È docente e interprete stimato, con all’attivo incisioni per etichette internazionali e collaborazioni con importanti festival e istituzioni musicali.
+    </p>
+    <p style="text-align: center; margin-top: 20px;">
+      <a href="biografia.html" class="bottone">Scopri di più</a>
+    </p>
+    
+  </section>
+
+  <section class="eventi">
+    <h2>Calendario Eventi</h2>
+
+  <div class="evento">
+    <h3>15 Giugno 2025 – Concerto a Roma</h3>
+    <p>Auditorium Parco della Musica – Ore 21:00</p>
+  </div>
+
+  <div class="evento">
+    <h3>28 Luglio 2025 – Masterclass a Firenze</h3>
+    <p>Conservatorio Cherubini – Tecnica e interpretazione nella chitarra classica</p>
+  </div>
+
+  <div class="evento">
+    <h3>12 Settembre 2025 – Recital a Milano</h3>
+    <p>Castello Sforzesco – Rassegna Internazionale di Chitarra</p>
+  </div>
+</section>
+
+<script>
+  const foto = document.getElementById('fotoProfilo');
+  const overlay = document.getElementById('overlay');
+  const overlayImg = overlay.querySelector('img');
+
+  foto.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+    void overlayImg.offsetWidth; // Forza reflow per animazione
+    overlay.classList.add('show');
+  });
+
+  function chiudiFoto() {
+    overlay.classList.remove('show');
+    setTimeout(() => {
+      overlay.style.display = 'none';
+    }, 400);
+  }
+</script>
+
+<script>
+
+  const foto = document.getElementById('fotoProfilo');
+  const overlay = document.getElementById('overlay');
+
+  foto.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+  });
+
+  function chiudiFoto() {
+    overlay.style.display = 'none';
+  }
+</script>
+
+<script>
+  const foto = document.getElementById('fotoProfilo');
+  const overlay = document.getElementById('overlay');
+  const overlayImg = overlay.querySelector('img');
+
+  foto.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+    void overlayImg.offsetWidth; //Forza reflow per animazione
+    overlay.classList.add('show');
+  });
+
+  function chiudiFoto() {
+    overlay.classList.remove('show');
+    setTimeout(() => {
+      overlay.style.display = 'none'; 
+    }, 400);
+  }
+</script>
+
+<script>
+
+  const foto = document.getElementById('fotoProfilo');
+  const overlay = document.getElementById('overlay');
+
+  foto.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+  });
+
+  function chiudiFoto() {
+    overlay.style.display = 'none';
+  }
+</script>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menuLinks"); //menu vecchio
+    menu.classList.toggle("open");
+  }
+</script>
+
+<section class="social">
+  <h2>Seguimi sui social</h2>
+  <div class="icone-social">
+    <a href="https://www.facebook.com/giuseppe.chiaramonte.guitarist" target="_blank" aria-label="Facebook">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com/giuseppechiaramonte.guitar/" target="_blank" aria-label="Instagram">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+    </a>
+    <a href="https://open.spotify.com/intl-it/artist/3UmR5XMA9CINH5SoDSBRgS?si=SoF_eWhsTum0-sWpFmLOTQ" target="_blank" aria-label="Spotify">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg" alt="Spotify">
+    </a>
+    <a href="https://www.youtube.com/@rrowmusic" target="_blank" aria-label="YouTube">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
+    </a>
+  </div>
+
+  <footer>
+    © 2025 Giuseppe Chiaramonte | <a href="cookie-policy.html">Cookie Policy</a>
+  </footer>
+
+</section>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    const overlay = document.getElementById("menuOverlay");
+    const isOpen = menu.classList.toggle("open");
+    overlay.classList.toggle("active", isOpen);
+  }
+
+  window.addEventListener('click', function(e) {
+    const menu = document.getElementById("mobileMenu");
+    const hamburger = document.querySelector('.hamburger');
+    const overlay = document.getElementById("menuOverlay");
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove("open");
+      overlay.classList.remove("active");
+    }
+  });
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,687 @@
+   /* CSS spostato*/
+   body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .hero img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+
+  .hero h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .hero img {
+      width: 150px;
+      height: 150px;
+    }
+
+    .hero h1 {
+      font-size: 2em;
+    }
+
+    .hero h2 {
+      font-size: 1.2em;
+    }
+  }
+
+  .biografia {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+  }
+
+  .biografia h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .biografia p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+  }
+
+.eventi {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.eventi h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+.evento {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #f4f4f4;
+  border-left: 4px solid #888;
+  border-radius: 5px;
+}
+
+.evento h3 {
+  margin: 0 0 5px 0;
+  color: #444;
+  font-size: 1.2em;
+}
+
+.evento p {
+  margin: 0;
+  color: #666;
+  font-size: 1em;
+}
+
+.contatti {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+.contatti h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+.contatti form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contatti label {
+  font-weight: bold;
+  color: #444;
+}
+
+.contatti input,
+.contatti textarea {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contatti button {
+  background-color: #333;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contatti button:hover {
+  background-color: #555;
+}
+
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.cliccabile {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cliccabile:hover {
+  transform: scale(1.05);
+}
+
+.cliccabile {
+  cursor: zoom-in;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cliccabile:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.overlay img.originale {
+  width: auto;
+  height: auto;
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 0;
+  object-fit: contain;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.overlay img.originale {
+  width: auto;
+  height: auto;
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 20px;
+  border: 4px solid #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.overlay.show img.originale {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+.menu {
+  background-color: #222;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.menu .logo a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.menu .hamburger {
+  display: none;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu-links li a:hover {
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .menu .hamburger {
+    display: block;
+  }
+
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-links.open {
+    display: flex;
+  }
+}
+
+
+.social {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.social h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.icone-social {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.icone-social a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+  filter: grayscale(1);
+}
+
+.icone-social a img:hover {
+  transform: scale(1.2);
+  filter: grayscale(0);
+}
+
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.5)),
+              url('copertina biografia.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: 'Georgia', serif;
+  font-size: 3em;
+  margin-bottom: 0.2em;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.sottotitolo {
+  font-style: italic;
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.bottone {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bottone:hover {
+  background: #e0e0e0;
+  transform: translateY(0);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.bottone:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero-content > * {
+  opacity: 0;
+  transform: translateY(0px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-content h1 { animation-delay: 0.3s; }
+.hero-content h2 { animation-delay: 0.6s; }
+.hero-content .sottotitolo { animation-delay: 0.9s; }
+.hero-content .bottone { animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+  }
+}
+
+/* QUESTA ANIMAZIONE è QUELLA CHE ROMPE LE PALLE NELLA HOME CHE ME LA FA SCOMPARIRE AL PASSAGGIO DEL CURSORE SENZA SENSO
+.bottone:hover {
+  animation: bounce 0.4s ease;
+}
+*/
+
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.immagine-biografia {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Disposizione pulsanti responsive */
+.album p a.bottone {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .album p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .album p a.bottone {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*roba nuova per menù mobile */
+
+.mobile-menu {
+  position: fixed;
+  top: 10px;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  background: #222;
+  color: white;
+  border-radius: 20px 0 0 20px;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.3);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1500;
+}
+
+.mobile-menu.open {
+  right: 10px;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-menu {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-menu ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.2s;
+}
+
+.mobile-menu ul li a:hover {
+  color: #ccc;
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .menu-links.desktop-only {
+    display: none;
+  }
+}
+
+
+.mobile-menu {
+  top: 0;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+
+/* Contenitore sfondo sfocato */
+.menu-blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1400;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.menu-blur-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Slide con animazione */
+.mobile-menu {
+  top: 0;
+  right: -100%;
+  transition: right 0.4s ease-in-out;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+
+.menu-blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* sotto al menu */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.menu-blur-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.titolo-menu {
+  flex: 1;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  line-height: 1;
+}
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+
+@media (max-width: 768px) {
+  .menu-links.desktop-only {
+    display: none;
+  }
+}
+
+/*test allineamento centrale pulsanti discografia mobile */
+@media (max-width: 768px) {
+  .link-streaming {
+    align-items: center; /* centra i pulsanti orizzontalmente */
+  }
+
+  .link-streaming a.bottone {
+    width: 90%;          /* larghezza più contenuta e centrata */
+    max-width: 320px;
+  }
+}
+/*test allineamento copertine centrali */
+@media (max-width: 768px) {
+  .album {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .album img {
+    margin: 0 auto;
+  }
+}
+
+/*pulsanti lingue pagina recensioni*/
+
+.lang-toggle button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lang-toggle button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.lang-toggle {
+  display: flex;
+  justify-content: center;   /* centra i pulsanti */
+  gap: 12px;                 /* spazio tra i pulsanti */
+  margin-bottom: 2rem;
+}
+
+
+/* Pulsanti recensioni con gradienti verticali */
+.lang-toggle button.btn-original {
+  background: linear-gradient(to bottom, #444, #111);
+  color: white;
+}
+
+.lang-toggle button.btn-en {
+  background: linear-gradient(to bottom, #ff4e50, #ff0000);
+  color: white;
+}
+
+.lang-toggle button.btn-it {
+  background: linear-gradient(to bottom, #00c851, #007e33);
+  color: white;
+}
+
+.it, .en, .original {
+      display: none;
+}

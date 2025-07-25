@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contatti - Giuseppe Chiaramonte</title>
+  <link rel="stylesheet" href="stile.css" />
+</head>
+<body>
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="logo"><a href="index.html">Home</a></div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="menu-links" id="menuLinks">
+      <li><a href="biografia.html">Biografia</a></li>
+      <li><a href="discografia.html">Discografia</a></li>
+      <li><a href="index.html#eventi">Eventi</a></li>
+      <li><a href="contatti.html" class="active">Contatti</a></li>
+      <li><a href="recensioni.html" class="active">Recensioni</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="contatti">
+  <h2>Contattami</h2>
+
+  <p style="text-align: center; margin-bottom: 20px;">
+    Per informazioni su concerti, lezioni private (in presenza o online) o collaborazioni, compila il modulo o utilizza i contatti qui sotto.
+  </p>
+
+  <!-- INFO STATICHE -->
+  <div style="margin-bottom: 30px;">
+    <p><strong>Email:</strong> giuseppe@email.it</p>
+    <p><strong>Telefono:</strong> +39 333 123 4567</p>
+    <p><strong>Indirizzo:</strong> Via Esempio 12, 87012 Castrovillari (CS)</p>
+    <p><strong>Orari disponibili:</strong> Lun–Ven, 10:00–18:00</p>
+  </div>
+
+  <!-- FORM CONTATTI CON FORMSPREE -->
+  <form action="https://formspree.io/f/tuoidform" method="POST">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="_replyto" required />
+
+    <label for="messaggio">Messaggio:</label>
+    <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+
+    <button type="submit">Invia Messaggio</button>
+  </form>
+</section>
+
+<!-- MAPPA GOOGLE -->
+<section class="contatti" style="margin-top: 20px;">
+  <h2>Dove mi trovo</h2>
+  <div style="width: 100%; height: 400px;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.830763396252!2d16.2073!3d39.8166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133fbd8cd8b7a251%3A0x4dddcfabc!2sCastrovillari%2C%20CS!5e0!3m2!1sit!2sit!4v0000000000000"
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
+
+<section class="social">
+  <h2>Seguimi sui social</h2>
+  <div class="icone-social">
+    <a href="https://www.facebook.com/giuseppe.chiaramonte.guitarist" target="_blank" aria-label="Facebook">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
+    </a>
+    <a href="https://www.instagram.com/giuseppechiaramonte.guitar/" target="_blank" aria-label="Instagram">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
+    </a>
+    <a href="https://open.spotify.com/intl-it/artist/3UmR5XMA9CINH5SoDSBRgS" target="_blank" aria-label="Spotify">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg" alt="Spotify" />
+    </a>
+    <a href="https://www.youtube.com/@rrowmusic" target="_blank" aria-label="YouTube">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" />
+    </a>
+  </div>
+</section>
+
+<script>
+  function toggleMenu() {
+    const links = document.getElementById("menuLinks");
+    links.classList.toggle("open");
+  }
+</script>
+
+</body>
+</html>
